@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
 
 	}
 
-
+	--colorscheme
 	use ({
 		'bluz71/vim-nightfly-colors',
 		as = 'nightfly',
@@ -19,8 +19,11 @@ return require('packer').startup(function(use)
 		end
 	
 	})
+
+	use({ 'rose-pine/neovim', as = 'rose-pine' })
+	use ('prichrd/netrw.nvim')
+
 	--facilitazione vita
-	use('nvim-tree/nvim-tree.lua')
 	use('nvim-tree/nvim-web-devicons') --aggiunta icone
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use('ThePrimeagen/harpoon')
