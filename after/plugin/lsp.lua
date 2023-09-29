@@ -1,7 +1,7 @@
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "clangd", "tsserver", "jdtls", "pyright" }
+	ensure_installed = { "lua_ls", "clangd", "tsserver", "jdtls", "pyright", "omnisharp" }
 })
 
 local lspconfig = require('lspconfig')
@@ -36,6 +36,7 @@ require("lspconfig").tsserver.setup({
 	single_file_support = true
 })
 require("lspconfig").pyright.setup({})
+require("lspconfig").omnisharp.setup({})
 
 require("lspconfig").clangd.setup({})
 
